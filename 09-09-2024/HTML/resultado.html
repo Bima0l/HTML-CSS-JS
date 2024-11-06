@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resultado Final</title>
+<link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+<div id="containerResultado">
+    <h2>Resultado Final</h2>
+    <p>Acertos: <span id="contadorAcertos"></span></p>
+    <p>Erros: <span id="contadorErros"></span></p>
+    
+    <h3>Detalhes das Respostas</h3>
+    <table id="tabelaResultados">
+        <thead>
+            <tr>
+                <th>Pergunta</th>
+                <th>Resposta Selecionada</th>
+                <th>Resposta Correta</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody id="respostasList"></tbody>
+    </table>
+    
+    <button onclick="reiniciarJogo()">Recomeçar Jogo</button>
+</div>
+
+<script>
+window.onload = function() {
+    const acertos = localStorage.getItem("acertos");
+    const erros = localStorage.getItem("erros");
+    const respostas = JSON.parse(localStorage.getItem("respostas"));
+
+    document.getElementById("contadorAcertos").innerText = acertos;
+    document.getElementById("contadorErros").innerText = erros;
+
+    // Exibir as respostas corretas em uma tabela
+    const respostasList = document.getElementById("respostasList");
+    respostas.forEach(resposta => {
+        const row = document.createElement("tr");
+
+        const cellPergunta = document.createElement("td");
+        cellPergunta.textContent = `Pergunta ${resposta.pergunta}`;
+        row.appendChild(cellPergunta);
+
+        const cellSelecionada = document.createElement("td");
+        cellSelecionada.textContent = resposta.respostaSelecionada === null ? 'Nenhuma' : resposta.respostaSelecionada;
+        row.appendChild(cellSelecionada);
+
+        const cellCorreta = document.createElement("td");
+        cellCorreta.textContent = resposta.correta;
+        row.appendChild(cellCorreta);
+
+        const cellStatus = document.createElement("td");
+        cellStatus.textContent = resposta.respostaSelecionada === resposta.correta ? 'Correto' : 'Incorreto';
+        cellStatus.style.color = resposta.respostaSelecionada === resposta.correta ? 'green' : 'red';
+        row.appendChild(cellStatus);
+
+        respostasList.appendChild(row);
+    });
+};
+
+function reiniciarJogo() {
+    localStorage.clear(); // Limpa o localStorage
+    window.location.href = "index.html"; // Volta para a tela inicial
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #e0f7fa; /* Cor de fundo alegre */
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #00796b; /* Cor do título, um verde escuro para combinar com o fundo */
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    background-color: #ffffff; /* Fundo das células */
+    border: 2px solid #00796b; /* Borda das células */
+    font-size: 2em;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.cell:hover {
+    background-color: #b2dfdb; /* Cor de fundo das células ao passar o mouse */
+}
+
+.cell.X {
+    color: #e57373; /* Cor do X, um vermelho alegre */
+}
+
+.cell.O {
+    color: #64b5f6; /* Cor do O, um azul vibrante */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #00796b; /* Cor do botão */
+    color: #ffffff; /* Cor do texto do botão */
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #004d40; /* Cor do botão ao passar o mouse */
+}
+
+#message {
+    font-size: 1.2em;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #00796b; /* Cor da mensagem */
+}

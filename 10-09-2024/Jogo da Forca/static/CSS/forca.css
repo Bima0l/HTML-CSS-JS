@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #9fdbce; /* Cor de fundo clara e suave */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilizando o header */
+header {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Ajuste a altura conforme necessário */
+    overflow: hidden; /* Garante que nada extrapole os limites do header */
+}
+
+/* Estilizando a imagem do cabeçalho */
+header .img-fluid {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz com que a imagem cubra todo o espaço disponível */
+    border-radius: 15px; /* Adiciona bordas arredondadas */
+}
+
+/* Estilizando o conteúdo principal */
+.container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Títulos */
+h1 {
+    color: #d94e76; /* Rosa escuro para destacar títulos */
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #333;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Dica */
+#dica {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Palavra */
+#palavra {
+    font-size: 3rem;
+    color: #d94e76;
+}
+
+/* Forca */
+#forca {
+    border: 2px solid #d94e76;
+    border-radius: 8px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* Campo de input */
+.form-group input {
+    font-size: 1.2rem;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.form-group {
+    margin-top: 20px; /* Espaço acima do campo de entrada */
+}
+
+
+/* Botões */
+.botoes button {
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Botão Primário - Adivinhar */
+.botoes .btn-primary {
+    background-color: #d94e76;
+    border-color: #d94e76;
+    color: white;
+}
+
+.botoes .btn-primary:hover,
+.botoes .btn-primary:focus {
+    background-color: #b53a5b; /* Tom mais escuro de rosa */
+    border-color: #b53a5b;
+    outline: none; /* Remove o contorno padrão do botão quando em foco */
+}
+
+.botoes .btn-primary:active {
+    background-color: #a33e4e; /* Tom ainda mais escuro de rosa */
+    border-color: #a33e4e;
+}
+
+/* Botão Secundário - Começar Novo Jogo */
+.botoes .btn-secondary {
+    background-color: #e0e0e0;
+    border-color: #c4c4c4;
+    color: #333;
+}
+
+.botoes .btn-secondary:hover {
+    background-color: #c4c4c4; /* Tom mais escuro de cinza */
+    border-color: #a0a0a0;
+}
+/* Estilizando o footer */
+footer {
+    background-color: #ac0645; /* Rosa escuro para o footer */
+    color: white;
+    padding: 10px 0;
+    margin-top: 20px; /* Adiciona uma margem superior ao rodapé */
+    text-align: center; /* Centraliza o texto no rodapé */
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.letra-correta {
+    color: #d94e76; /* Rosa escuro para letras corretas */
+    font-size: 3rem; /* Tamanho da fonte das letras */
+    margin-right: 0.5rem; /* Espaço entre letras */
+    position: relative; /* Para posicionar o traço abaixo */
+}
+
+.traco {
+    color: black; /* Preto para os tracinhos */
+    font-size: 3rem; /* Tamanho da fonte dos tracinhos */
+    margin-right: 0.5rem; /* Espaço entre tracinhos */
+    display: inline-block; /* Para manter o traço na mesma linha */
+}
+
+#palavra {
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 20px; /* Espaço abaixo da palavra */
+}
+
+
+
+
