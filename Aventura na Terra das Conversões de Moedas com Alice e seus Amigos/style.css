@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url('./dimdim.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #000000;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+    font-family: 'Bodoni Moda', serif; 
+    position: fixed; /* Fixa o título no topo */
+    top: 45px; /* Distância do topo da página */
+    left: 50%; /* Alinha o título horizontalmente */
+    transform: translateX(-50%); /* Centraliza o título */
+    font-size: 4rem; /* Aumenta o tamanho do título */
+    font-weight: 600;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    z-index: 100; /* Garante que o título fique acima dos outros elementos */
+  }
+/* Contêiner principal para alinhar os blocos lado a lado */
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px; /* Limite de largura da tela */
+  gap: 20px; /* Espaço entre os blocos */
+}
+
+/* Bloco para o conversor */
+.conversor-container,
+.historico-container {
+    
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 12px;
+  width: 48%; /* Ajuste da largura do conversor e histórico */
+}
+
+/* Ajustes no formulário */
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+  border-color: #34c759;
+}
+
+.convert-button {
+    
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #00c853, #009688);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+
+.convert-button:hover {
+  background: linear-gradient(135deg, #009688, #00c853);
+  transform: scale(1.05);
+}
+
+.result {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #34c759;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* Histórico */
+.historico {
+  margin-top: 10px;
+}
+
+.historico div {
+ 
+  background: rgba(0, 0, 0, 0.2);
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 8px;
+  font-size: 14px;
+  color: rgb(0, 0, 0);
+}
+
